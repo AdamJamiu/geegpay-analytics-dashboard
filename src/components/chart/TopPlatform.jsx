@@ -1,7 +1,7 @@
 const TopPlatform = () => {
     return (
-        <div className="rounded-lg border-borderGray p-5 g-white shadow-sm bg-white text-lg">
-            <div className="w-full flex flex-row justify-between items-center font-medium">
+        <div className="rounded-xl border-borderGray border p-5 g-white  bg-white">
+            <div className="w-full flex flex-row justify-between items-center font-medium text-lg">
                 <h2 className="font-semibold  text-neutralGray">Top Platform</h2>
                 <p className="text-primaryGreen cursor-pointer hover:underline">See All</p>
 
@@ -15,7 +15,7 @@ const TopPlatform = () => {
                 </div>
 
                 <div className="w-full flex flex-row justify-between items-center">
-                    <p className="text-neutralGray"> $2,500,000</p>
+                    <p className="text-neutralGray">$2,500,000</p>
                     <p className="text-neutralGray">+15%</p>
                 </div>
             </div>
@@ -29,7 +29,7 @@ const TopPlatform = () => {
                 </div>
 
                 <div className="w-full flex flex-row justify-between items-center">
-                    <p className="text-neutralGray"> $1,800,000</p>
+                    <p className="text-neutralGray">$1,800,000</p>
                     <p className="text-neutralGray">+10%</p>
                 </div>
             </div>
@@ -43,7 +43,7 @@ const TopPlatform = () => {
                 </div>
 
                 <div className="w-full flex flex-row justify-between items-center">
-                    <p className="text-neutralGray"> $1,200,000</p>
+                    <p className="text-neutralGray">$1,200,000</p>
                     <p className="text-neutralGray">+8%</p>
                 </div>
             </div>

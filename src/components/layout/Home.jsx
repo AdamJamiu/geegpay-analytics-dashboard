@@ -7,7 +7,7 @@ const DashboardLayout = () => {
         <>
             <Navbar />
             <Sidebar />
-            <div className="md:pl-20 bg-secondaryGray min-h-[84vh] h-full">
+            <div className="lg:pl-20 bg-secondaryGray min-h-[84vh] h-full">
                 <Outlet />
             </div>
         </>

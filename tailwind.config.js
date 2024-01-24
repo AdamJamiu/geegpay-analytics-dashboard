@@ -24,6 +24,7 @@ export default {
         appPurple: "#6160DC",
         appCyan: "#54C5EB",
         appOrange: "#FFB74A",
+        ordersBorder: "rgba(230, 230, 230, 1)",
       }
     },
   },
