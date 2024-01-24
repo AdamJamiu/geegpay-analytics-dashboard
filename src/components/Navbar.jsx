@@ -1,29 +1,33 @@
+import { useEffect, useRef, useState } from "react"
+
 import searchIcon from "/search-icon.svg"
 import calenderIcon from "/solar_calendar-linear.svg"
 import bellIcon from "/bell.svg"
 import avatarIcon from '/justin-bergson.png'
 import checronDownIcon from '/chevron-down.svg'
-import { useEffect, useState } from "react"
 
 const Navbar = ({ togglActive }) => {
-    const [isScrolled, setIsScrolled] = useState();
+    const dropdownRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false)
 
+    const dropdownVisibility = isVisible ? 'block' : 'hidden';
+
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) setIsVisible(false);
+    };
+
+    // Add a click event listener to handle clicks outside the dropdown
     useEffect(() => {
-        const handleScroll = () => {
-            const scrolled = window.scrollY > 0;
-
-            setIsScrolled(scrolled);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
+        document.addEventListener('mousedown', handleClickOutside);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+    }, [])
+
+    const toggleDropdown = () => setIsVisible(prev => !prev);
 
     return (
-        <nav className={`${isScrolled ? 'transform translate-y-0 fixed' : ' -translate-y-1'} ease-in-out transition-transform bg-[#F7F8FA] w-full border-b-[#EBECF2] border lg:pl-28 py-4 px-4 sm:pr-5 flex flex-row justify-between items-center`}>
+        <nav className='fixed ease-in-out bg-[#F7F8FA] w-full border-b-[#EBECF2] border lg:pl-28 py-4 px-4 sm:pr-5 flex flex-row justify-between items-center'>
 
             <div className="flex flex-row justify-start items-center gap-4 lg:gap-2">
                 <div onClick={togglActive} className="lg:hidden block hover:cursor-pointer p-2 rounded-md hover:bg-white ease transition-all focus:bg-gray-100 active:bg-gray-200">
@@ -55,7 +59,7 @@ const Navbar = ({ togglActive }) => {
                     <img src={avatarIcon} />
 
                     <div className="">
-                        <p className="text-sm lg:text-md text-primaryBlack">Justin Bergson</p>
+                        <p className="text-sm lg:text-md text-primaryBlack font-medium">Justin Bergson</p>
                         <p className="text-sm text-primaryGray">Justin@gmail.com</p>
                     </div>
 
@@ -64,7 +68,26 @@ const Navbar = ({ togglActive }) => {
 
 
             </div>
-            <img src={avatarIcon} className="block lg:hidden cursor-pointer" />
+
+            <div className="relative lg:hidden block">
+                <img src={avatarIcon} onClick={toggleDropdown} className="block lg:hidden cursor-pointer" />
+
+                <div ref={dropdownRef} className={`z-30 absolute bg-white text-gray-800 top-12 rounded-md shadow-md right-0 w-56 ${dropdownVisibility}`}>
+                    <div className="p-3 text-center">
+                        <p className="text-sm lg:text-md text-primaryBlack font-medium">Justin Bergson</p>
+                        <p className="text-sm text-primaryGray">Justin@gmail.com</p>
+                    </div>
+
+                    <div className="flex flex-row justify-center items-center gap-3 p-3 text-sm ">
+                        <img src={calenderIcon} />
+                        <p className="font-inter text-primaryBlack">November 15, 2023</p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
         </nav>
     )
 }

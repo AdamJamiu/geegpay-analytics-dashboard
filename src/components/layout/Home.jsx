@@ -13,7 +13,7 @@ const DashboardLayout = () => {
         <>
             <Navbar togglActive={togglActive} />
             <Sidebar isActive={isActive} setIsActive={setIsActive} />
-            <div className="lg:pl-20 bg-secondaryGray min-h-[84vh] h-full">
+            <div className="lg:pl-20 pt-20 bg-secondaryGray min-h-[84vh] h-full">
                 <Outlet />
             </div>
         </>

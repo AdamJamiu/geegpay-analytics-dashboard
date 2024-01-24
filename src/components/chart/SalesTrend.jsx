@@ -36,7 +36,7 @@ const options = {
 };
 
 const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const fakeData = [15, 20, 15, 30, 50, 20, 25, 30, 25, 10, 45, 30]
+const fakeData = [20, 35, 15, 40, 20, 50, 15, 25, 35, 20, 40, 30]
 
 const data = {
     labels,
@@ -58,12 +58,12 @@ export const SalesTrend = () => {
             <div className="w-full flex flex-row justify-between items-center mb-2">
                 <h2 className="font-semibold text-lg text-neutralGray">Sales Trends</h2>
 
-                <div className="flex flex-row justify-start items-center gap-3">
-                    <p className="text-[#3A3F51] font-medium text-xs sm:text-sm">Sort by: </p>
+                <div className="flex flex-row justify-start items-center gap-1">
+                    <p className="text-[#3A3F51] font-medium text-xs">Sort by: </p>
 
-                    <div className="rounded-full py-2 px-3 border text-xs sm:text-sm font-medium min-w-max flex flex-row justify-start items-center gap-3">
-                        <p className='text-[#3A3F51]'>Weekly</p>
-                        <img src={checvronDown} />
+                    <div className="rounded-full py-2 px-3 border text-xs font-medium min-w-max flex flex-row justify-start items-center gap-3">
+                        <p className='text-[#3A3F51] text-xs'>Weekly</p>
+                        <img src={checvronDown} className="h-4" />
                     </div>
                 </div>
             </div>
