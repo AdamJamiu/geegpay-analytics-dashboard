@@ -19,6 +19,11 @@ export default {
         secondaryGray: "#FAFAFA",
         primaryGreen: "#34CAA5",
         dangerRed: "#ED544E",
+        appBlack: "#22242C",
+        appGrey: "#F5F5F5",
+        appPurple: "#6160DC",
+        appCyan: "#54C5EB",
+        appOrange: "#FFB74A",
       }
     },
   },

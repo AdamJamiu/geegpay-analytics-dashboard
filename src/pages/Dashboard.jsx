@@ -5,12 +5,12 @@ import TopPlatform from "../components/chart/TopPlatform";
 export const Dashboard = () => {
     return (
         <section className="p-10">
-            <div className="w-full grid grid-cols-3 gap-5">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
                 <SalesTrend />
                 <TopPlatform />
             </div>
 
-            <div className="w-full grid grid-cols-3 gap-7 mt-5">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
                 <LastFiveOrders />
                 <TopPlatform />
             </div>

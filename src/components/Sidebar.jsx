@@ -11,7 +11,7 @@ import moonIcon from "/moon.svg"
 
 const Sidebar = () => {
     return (
-        <div className="absolute left-0 top-0 bottom-0 bg-[#F7F8FA] w-24 flex flex-col justify-start items-center gap-7 py-7 border border-r-[#EBECF2]">
+        <div className={`md:translate-x-0 -translate-x-96 ease-in-out transition-transform duration-300 fixed left-0 top-0 bottom-0 bg-[#F7F8FA] w-24 flex flex-col justify-start items-center gap-7 py-7 border border-r-[#EBECF2]`}>
             <Link to="/">
                 <img src={logo} />
             </Link>

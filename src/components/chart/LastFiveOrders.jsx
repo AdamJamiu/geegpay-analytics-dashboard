@@ -8,10 +8,10 @@ import downloadBtn from "/document-download.svg"
 
 export const LastFiveOrders = () => {
     return (
-        <div className="rounded-xl border border-borderGray p-4 font-plus-jakarta-sans w-full col-span-2 bg-white">
-            <div className="w-full flex flex-row justify-between items-center font-medium">
+        <div className="rounded-xl border border-borderGray p-4 font-plus-jakarta-sans w-full col-span-1 md:col-span-2 bg-white">
+            <div className="w-full flex flex-row justify-between items-center font-medium text-lg">
                 <h2 className="font-semibold text-neutralGray">Last Orders</h2>
-                <p className="text-primaryGreen cursor-pointer">See All</p>
+                <p className="text-primaryGreen cursor-pointer hover:underline">See All</p>
             </div>
 
             <table className="w-full mt-5 font-plus-jakarta-sans">
