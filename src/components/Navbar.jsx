@@ -5,7 +5,7 @@ import avatarIcon from '/justin-bergson.png'
 import checronDownIcon from '/chevron-down.svg'
 import { useEffect, useState } from "react"
 
-const Navbar = () => {
+const Navbar = ({ togglActive }) => {
     const [isScrolled, setIsScrolled] = useState();
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className={`${isScrolled ? 'transform translate-y-0 fixed' : ' -translate-y-1'} ease-in-out transition-transform bg-[#F7F8FA] w-full border-b-[#EBECF2] border lg:pl-28 py-4 px-4 sm:pr-5 flex flex-row justify-between items-center`}>
 
             <div className="flex flex-row justify-start items-center gap-4 lg:gap-2">
-                <div className="lg:hidden block hover:cursor-pointer p-2 rounded-md hover:bg-white ease transition-all focus:bg-gray-100 active:bg-gray-200">
+                <div onClick={togglActive} className="lg:hidden block hover:cursor-pointer p-2 rounded-md hover:bg-white ease transition-all focus:bg-gray-100 active:bg-gray-200">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 7H21" stroke="#26282C" stroke-width="2" stroke-linecap="round" />
                         <path d="M3 12H21" stroke="#26282C" stroke-width="2" stroke-linecap="round" />
