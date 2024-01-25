@@ -23,6 +23,7 @@ const options = {
         x: {
             grid: {
                 display: false,
+                borderDash: [5, 5],
             },
         },
         y: {
@@ -36,7 +37,7 @@ const options = {
 };
 
 const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const fakeData = [20, 35, 15, 40, 20, 50, 15, 25, 35, 20, 40, 30]
+const fakeData = [20, 30, 10, 40, 30, 50, 25, 35, 45, 20, 45, 30]
 
 const data = {
     labels,
